@@ -1,0 +1,14 @@
+/home/ethar/Desktop/MVC3/GymSystemG2AL/obj/Debug/net9.0/GymSystemG2AL.csproj.AssemblyReference.cache
+/home/ethar/Desktop/MVC3/GymSystemG2AL/obj/Debug/net9.0/GymSystemG2AL.GeneratedMSBuildEditorConfig.editorconfig
+/home/ethar/Desktop/MVC3/GymSystemG2AL/obj/Debug/net9.0/GymSystemG2AL.AssemblyInfoInputs.cache
+/home/ethar/Desktop/MVC3/GymSystemG2AL/obj/Debug/net9.0/GymSystemG2AL.AssemblyInfo.cs
+/home/ethar/Desktop/MVC3/GymSystemG2AL/obj/Debug/net9.0/GymSystemG2AL.csproj.CoreCompileInputs.cache
+/home/ethar/Desktop/MVC3/GymSystemG2AL/bin/Debug/net9.0/GymSystemG2AL.deps.json
+/home/ethar/Desktop/MVC3/GymSystemG2AL/bin/Debug/net9.0/GymSystemG2AL.runtimeconfig.json
+/home/ethar/Desktop/MVC3/GymSystemG2AL/bin/Debug/net9.0/GymSystemG2AL.dll
+/home/ethar/Desktop/MVC3/GymSystemG2AL/bin/Debug/net9.0/GymSystemG2AL.pdb
+/home/ethar/Desktop/MVC3/GymSystemG2AL/obj/Debug/net9.0/GymSystemG2AL.dll
+/home/ethar/Desktop/MVC3/GymSystemG2AL/obj/Debug/net9.0/refint/GymSystemG2AL.dll
+/home/ethar/Desktop/MVC3/GymSystemG2AL/obj/Debug/net9.0/GymSystemG2AL.pdb
+/home/ethar/Desktop/MVC3/GymSystemG2AL/obj/Debug/net9.0/GymSystemG2AL.genruntimeconfig.cache
+/home/ethar/Desktop/MVC3/GymSystemG2AL/obj/Debug/net9.0/ref/GymSystemG2AL.dll

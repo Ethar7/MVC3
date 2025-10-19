@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GymSysteG2PL", "GymSysteG2PL\GymSysteG2PL.csproj", "{A36AD25C-9329-4959-9D3F-F74AB829100E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GymSystemG2AL", "GymSystemG2AL\GymSystemG2AL.csproj", "{F2BE9FEA-7E13-4FDC-90B8-42315B9FF5D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GymSystemBLL", "GymSystemBLL\GymSystemBLL.csproj", "{A1B19925-1F21-4186-A3CC-694C04A8B2D5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A36AD25C-9329-4959-9D3F-F74AB829100E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A36AD25C-9329-4959-9D3F-F74AB829100E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A36AD25C-9329-4959-9D3F-F74AB829100E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A36AD25C-9329-4959-9D3F-F74AB829100E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2BE9FEA-7E13-4FDC-90B8-42315B9FF5D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2BE9FEA-7E13-4FDC-90B8-42315B9FF5D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2BE9FEA-7E13-4FDC-90B8-42315B9FF5D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2BE9FEA-7E13-4FDC-90B8-42315B9FF5D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1B19925-1F21-4186-A3CC-694C04A8B2D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1B19925-1F21-4186-A3CC-694C04A8B2D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1B19925-1F21-4186-A3CC-694C04A8B2D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1B19925-1F21-4186-A3CC-694C04A8B2D5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
