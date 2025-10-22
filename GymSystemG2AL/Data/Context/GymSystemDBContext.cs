@@ -9,9 +9,14 @@ using Microsoft.EntityFrameworkCore;
 
 public class GymSystemDBContext : DbContext
 {
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    // protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    // {
+    //     optionsBuilder.UseSqlServer("Server=localhost;Database=GymSystemDB;User Id=sa;Password=Ethar2025@#;TrustServerCertificate=True;");
+    // }
+
+    public GymSystemDBContext(DbContextOptions<GymSystemDBContext> options)
     {
-        optionsBuilder.UseSqlServer("Server=localhost;Database=GymSystemDB;User Id=sa;Password=Ethar2025@#;TrustServerCertificate=True;");
+           
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -22,6 +27,7 @@ public class GymSystemDBContext : DbContext
 
     #region Tables
     internal DbSet<Member> Members { get; set; }
+    internal DbSet<Trainer> Trainers{ get; set; }
     internal DbSet<HealthRecord> HealthRecords { get; set; }
     internal DbSet<Plan> Plans { get; set; }
     internal DbSet<Category> Categories { get; set; }

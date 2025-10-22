@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace GymSystemG2AL.Entities
 {
-    internal class MemberShip : BaseEntity
+    public class MemberShip : BaseEntity
     {
         public int MemberId { get; set; }
 

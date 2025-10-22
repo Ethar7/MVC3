@@ -7,7 +7,7 @@ using GymSystemG2AL.Entities.Enums;
 
 namespace GymSystemG2AL.Entities
 {
-    internal class Trainer : GymUser
+    public class Trainer : GymUser
     {
         // Created at Exsisted in Base entity
         // I will use this column as JoinDate For Member +> Configurations 

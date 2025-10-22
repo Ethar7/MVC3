@@ -7,7 +7,7 @@ using GymSystemG2AL.Entities.Enums;
 
 namespace GymSystemG2AL.Entities
 {
-    internal class HealthRecord : BaseEntity
+    public class HealthRecord : BaseEntity
     {
         public decimal Height { get; set; }
         public decimal Weight { get; set; }

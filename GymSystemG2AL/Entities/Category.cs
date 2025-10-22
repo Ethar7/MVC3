@@ -7,7 +7,7 @@ using GymSystemG2AL.Entities.Enums;
 
 namespace GymSystemG2AL.Entities
 {
-    internal class Category : BaseEntity
+    public class Category : BaseEntity
     {
         public string CategoryName { get; set; } = null!;
         

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace GymSystemG2AL.Entities
 {
-    internal class Member : GymUser
+    public class Member : GymUser
     {
         // Created at Exsisted in Base entity
         // I will use this column as JoinDate For Member +> Configurations 
