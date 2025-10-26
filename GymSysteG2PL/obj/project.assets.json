@@ -3156,7 +3156,8 @@
   },
   "projectFileDependencyGroups": {
     "net9.0": [
-      "GymSystemBLL >= 1.0.0"
+      "GymSystemBLL >= 1.0.0",
+      "GymSystemG2AL >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -3186,6 +3187,9 @@
           "projectReferences": {
             "/home/ethar/Desktop/MVC3/GymSystemBLL/GymSystemBLL.csproj": {
               "projectPath": "/home/ethar/Desktop/MVC3/GymSystemBLL/GymSystemBLL.csproj"
+            },
+            "/home/ethar/Desktop/MVC3/GymSystemG2AL/GymSystemG2AL.csproj": {
+              "projectPath": "/home/ethar/Desktop/MVC3/GymSystemG2AL/GymSystemG2AL.csproj"
             }
           }
         }

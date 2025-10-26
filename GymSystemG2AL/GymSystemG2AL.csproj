@@ -19,9 +19,5 @@
     </PackageReference>
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="../GymSysteG2PL/GymSysteG2PL.csproj" />
-    <ProjectReference Include="../GymSystemBLL/GymSystemBLL.csproj" />
-  </ItemGroup>
-
 </Project>
+

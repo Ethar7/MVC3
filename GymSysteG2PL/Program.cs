@@ -1,8 +1,7 @@
 using GymSystemG2AL.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using GymSystemG2AL.Repositories.Classes;
-
-
+using GymSystemG2AL.Data.DataSeed;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -23,7 +22,23 @@ builder.Services.AddDbContext<GymSystemDBContext>(options =>
 
 builder.Services.AddScoped(typeof(IGenaricRepository<>), typeof(GenaricRepository<>));
 builder.Services.AddScoped<IPlanRepository, PlanRepository>();
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 var app = builder.Build();
+
+#region  Data Seed
+var Scope = app.Services.CreateScope();
+var dBContext = Scope.ServiceProvider.GetRequiredService<GymSystemDBContext>();
+
+// check migrations
+
+var PendingMigrations = dBContext.Database.GetPendingMigrations();
+
+if (PendingMigrations?.Any() ?? false)
+
+    dBContext.Database.Migrate();
+
+GymDbContextSeeding.SeedData(dBContext);
+#endregion
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

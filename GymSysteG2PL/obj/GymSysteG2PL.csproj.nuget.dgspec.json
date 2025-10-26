@@ -28,6 +28,9 @@
             "projectReferences": {
               "/home/ethar/Desktop/MVC3/GymSystemBLL/GymSystemBLL.csproj": {
                 "projectPath": "/home/ethar/Desktop/MVC3/GymSystemBLL/GymSystemBLL.csproj"
+              },
+              "/home/ethar/Desktop/MVC3/GymSystemG2AL/GymSystemG2AL.csproj": {
+                "projectPath": "/home/ethar/Desktop/MVC3/GymSystemG2AL/GymSystemG2AL.csproj"
               }
             }
           }
