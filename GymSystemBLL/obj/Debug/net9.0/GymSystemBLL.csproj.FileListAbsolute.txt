@@ -1,0 +1,16 @@
+/home/ethar/Desktop/MVC3/GymSystemBLL/obj/Debug/net9.0/GymSystemBLL.csproj.AssemblyReference.cache
+/home/ethar/Desktop/MVC3/GymSystemBLL/obj/Debug/net9.0/GymSystemBLL.GeneratedMSBuildEditorConfig.editorconfig
+/home/ethar/Desktop/MVC3/GymSystemBLL/obj/Debug/net9.0/GymSystemBLL.AssemblyInfoInputs.cache
+/home/ethar/Desktop/MVC3/GymSystemBLL/obj/Debug/net9.0/GymSystemBLL.AssemblyInfo.cs
+/home/ethar/Desktop/MVC3/GymSystemBLL/obj/Debug/net9.0/GymSystemBLL.csproj.CoreCompileInputs.cache
+/home/ethar/Desktop/MVC3/GymSystemBLL/obj/Debug/net9.0/GymSystemBLL.sourcelink.json
+/home/ethar/Desktop/MVC3/GymSystemBLL/bin/Debug/net9.0/GymSystemBLL.deps.json
+/home/ethar/Desktop/MVC3/GymSystemBLL/bin/Debug/net9.0/GymSystemBLL.dll
+/home/ethar/Desktop/MVC3/GymSystemBLL/bin/Debug/net9.0/GymSystemBLL.pdb
+/home/ethar/Desktop/MVC3/GymSystemBLL/bin/Debug/net9.0/GymSystemG2AL.dll
+/home/ethar/Desktop/MVC3/GymSystemBLL/bin/Debug/net9.0/GymSystemG2AL.pdb
+/home/ethar/Desktop/MVC3/GymSystemBLL/obj/Debug/net9.0/GymSyste.7665B620.Up2Date
+/home/ethar/Desktop/MVC3/GymSystemBLL/obj/Debug/net9.0/GymSystemBLL.dll
+/home/ethar/Desktop/MVC3/GymSystemBLL/obj/Debug/net9.0/refint/GymSystemBLL.dll
+/home/ethar/Desktop/MVC3/GymSystemBLL/obj/Debug/net9.0/GymSystemBLL.pdb
+/home/ethar/Desktop/MVC3/GymSystemBLL/obj/Debug/net9.0/ref/GymSystemBLL.dll
