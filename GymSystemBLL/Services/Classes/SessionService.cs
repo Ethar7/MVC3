@@ -22,6 +22,28 @@ namespace GymSystemBLL.Services.Classes
             _mapper = mapper;
         }
 
+        public bool CreateSession(CreateSessionViewModel createSession)
+        {
+            try
+            {
+                // Checktrainer, Cat Exsit StartDate < EndDate
+
+                if (!IsTrainerExsist(createSession.TrainerId)) return false;
+                if (!IsCategoryExsist(createSession.CategoryId)) return false;
+                if (!IsDateTimeValid(createSession.StartDate, createSession.EndDate)) return false;
+                if (createSession.Capacity > 25 || createSession.Capacity < 0) return false;
+
+                var SessionEntity = _mapper.Map<Session>(createSession);
+                _unitOfWork.GetRepository<Session>().Add(SessionEntity);
+                return _unitOfWork.SaveChanges() > 0;
+            }
+            catch (System.Exception)
+            {
+                
+                throw;
+            }
+        }
+
         public IEnumerable<SessionViewModel> GetAllSessions()
         {
             // var Sessions = _unitOfWork.GetRepository<Session>().GetAll();
@@ -67,6 +89,71 @@ namespace GymSystemBLL.Services.Classes
             MappedSession.AvailableSlots = MappedSession.Capacity - _unitOfWork.SessionRepository.GetCountOfBookedSlots(MappedSession.Id);
             return MappedSession;
             #endregion
+
         }
+        public UpdateSessionViewModel? GetSessionToUpdate(int sessionId)
+        {
+            var Session = _unitOfWork.SessionRepository.GetBYId(sessionId);
+
+            if (!IsSessionAvaliableForUpdate(Session!)) return null;
+
+            return _mapper.Map<UpdateSessionViewModel>(Session);
+        }
+
+        public bool UpdateSession(UpdateSessionViewModel updateSession, int sessionId)
+        {
+            try
+            {
+                var Session = _unitOfWork.SessionRepository.GetBYId(sessionId);
+                if (!IsSessionAvaliableForUpdate(Session!)) return false;
+                if (!IsTrainerExsist(updateSession.TrainerId)) return false;
+                if (!IsDateTimeValid(updateSession.StartDate, updateSession.EndDate)) return false;
+
+                _mapper.Map(updateSession, Session);
+                Session!.UpdatedAt = DateTime.Now;
+                _unitOfWork.SessionRepository.Update(Session);
+                return _unitOfWork.SaveChanges() > 0;
+            }
+            catch (System.Exception)
+            {
+
+                return false;
+            }
+        }
+
+        #region Helper Methods
+
+        private bool IsTrainerExsist(int TrainerId)
+        {
+            return _unitOfWork.GetRepository<Trainer>().GetBYId(TrainerId) is not null;
+        }
+
+        private bool IsCategoryExsist(int CategoryId)
+        {
+            return _unitOfWork.GetRepository<Category>().GetBYId(CategoryId) is not null;
+        }
+
+        private bool IsDateTimeValid(DateTime StratDate, DateTime EndDate)
+        {
+            return StratDate < EndDate;
+        }
+
+        private bool IsSessionAvaliableForUpdate(Session session)
+        {
+            if (session is null) return false;
+
+            // if Session completed => cannot update
+            if (session.EndDate < DateTime.Now) return false;
+            // if Session Started => Cannot Update
+            if (session.StartDate <= DateTime.Now) return false;
+            // if Session HasActiveBooking => Cannot Update
+            var ActiveBooking = _unitOfWork.SessionRepository.GetCountOfBookedSlots(session.Id) > 0;
+
+            if (ActiveBooking) return false;
+
+            return true;
+        }
+
+        #endregion
     }
 }
