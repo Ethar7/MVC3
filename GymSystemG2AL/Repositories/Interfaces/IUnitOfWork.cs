@@ -15,5 +15,7 @@ namespace GymSystemG2AL.Repositories.Interfaces
         IGenaricRepository<TEntity> GetRepository<TEntity>() where TEntity : BaseEntity, new();
 
         int SaveChanges();
+
+        public ISessionRepository SessionRepository{ get;}
     }
 }

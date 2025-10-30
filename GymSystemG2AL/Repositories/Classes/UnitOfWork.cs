@@ -12,10 +12,14 @@ namespace GymSystemG2AL.Repositories.Classes
     {
         private readonly Dictionary<Type, object> repositories = new Dictionary<Type, object>();
         private readonly GymSystemDBContext dbContext;
-        public UnitOfWork(GymSystemDBContext dBContext )
+        public UnitOfWork(GymSystemDBContext dBContext , ISessionRepository sessionRepository)
         {
             dbContext = dBContext;
+            SessionRepository = sessionRepository;
         }
+
+        public ISessionRepository SessionRepository { get; }
+
         public IGenaricRepository<TEntity> GetRepository<TEntity>() where TEntity : BaseEntity, new()
         {
             var EntityType = typeof(TEntity);
