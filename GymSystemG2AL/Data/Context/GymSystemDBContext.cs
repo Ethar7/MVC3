@@ -14,10 +14,10 @@ public class GymSystemDBContext : DbContext
     //     optionsBuilder.UseSqlServer("Server=localhost;Database=GymSystemDB;User Id=sa;Password=Ethar2025@#;TrustServerCertificate=True;");
     // }
 
-    public GymSystemDBContext(DbContextOptions<GymSystemDBContext> options)
+   public GymSystemDBContext(DbContextOptions<GymSystemDBContext> options): base(options)
     {
-           
     }
+
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
