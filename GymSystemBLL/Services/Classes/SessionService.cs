@@ -120,6 +120,22 @@ namespace GymSystemBLL.Services.Classes
                 return false;
             }
         }
+        public bool RemoveSession(int sessionId)
+        {
+           try
+           {
+                var Session = _unitOfWork.SessionRepository.GetBYId(sessionId);
+                if (!IsSessionAvaliableForDelete(Session!)) return false;
+
+                _unitOfWork.SessionRepository.Delete(Session!);
+                return _unitOfWork.SaveChanges() > 0;
+           }
+           catch (System.Exception)
+           {
+
+                return false;
+           }
+        }
 
         #region Helper Methods
 
@@ -153,6 +169,25 @@ namespace GymSystemBLL.Services.Classes
 
             return true;
         }
+
+        private bool IsSessionAvaliableForDelete(Session session)
+        {
+            if (session is null) return false;
+
+            // if Session completed => cannot delete
+            if (session.EndDate < DateTime.Now) return false;
+            // if Session Upcomming => cannot delete
+            if (session.StartDate > DateTime.Now) return false;
+            // if Session ongoing => Cannot delete
+            if (session.StartDate <= DateTime.Now && session.EndDate > DateTime.Now) return false;
+            // if Session HasActiveBooking => Cannot delete
+            var ActiveBooking = _unitOfWork.SessionRepository.GetCountOfBookedSlots(session.Id) > 0;
+
+            if (ActiveBooking) return false;
+
+            return true;
+        }
+
 
         #endregion
     }
