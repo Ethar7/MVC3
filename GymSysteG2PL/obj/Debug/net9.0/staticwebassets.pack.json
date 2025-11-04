@@ -5,6 +5,14 @@
       "PackagePath": "staticwebassets/GymSysteG2PL.zlo4xgbww9.bundle.scp.css"
     },
     {
+      "Id": "/home/ethar/Desktop/MVC3/GymSysteG2PL/wwwroot/Files/categories.json",
+      "PackagePath": "staticwebassets/Files/categories.json"
+    },
+    {
+      "Id": "/home/ethar/Desktop/MVC3/GymSysteG2PL/wwwroot/Files/plans.json",
+      "PackagePath": "staticwebassets/Files/plans.json"
+    },
+    {
       "Id": "/home/ethar/Desktop/MVC3/GymSysteG2PL/wwwroot/css/site.css",
       "PackagePath": "staticwebassets/css/site.css"
     },

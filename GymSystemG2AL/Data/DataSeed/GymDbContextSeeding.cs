@@ -46,7 +46,7 @@ namespace GymSystemG2AL.Data.DataSeed
         {
             // "C:\Users\ragab\Downloads\categories.json"
 
-            var FilePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot\\Files", FileName);
+            var FilePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot","Files", FileName);
 
             if (!File.Exists(FilePath))
                 throw new FileNotFoundException();
