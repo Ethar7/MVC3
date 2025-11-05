@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GymSystemG2AL.Migrations
 {
     [DbContext(typeof(GymSystemDBContext))]
-    [Migration("20251105122715_InitialCreatt")]
+    [Migration("20251105191247_InitialCreatt")]
     partial class InitialCreatt
     {
         /// <inheritdoc />
@@ -319,7 +319,7 @@ namespace GymSystemG2AL.Migrations
 
                     b.ToTable("Trainers", t =>
                         {
-                            t.HasCheckConstraint("GymUserValidEmailCheck", "Email Like '_%@_%._&'");
+                            t.HasCheckConstraint("GymUserValidEmailCheck", "Email Like '_%@_%._%'");
 
                             t.HasCheckConstraint("GymUserValidPhoneCheck", "Phone Like '01%' and Phone Not Like '%[^0-9]%'");
                         });

@@ -87,6 +87,12 @@ namespace GymSystemG2AL.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<DateTime>("CreatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasColumnName("JoinDate")
+                        .HasDefaultValueSql("GETDATE()");
+
                     b.Property<DateOnly>("DateOfBirth")
                         .HasColumnType("date");
 
@@ -110,6 +116,11 @@ namespace GymSystemG2AL.Migrations
 
                     b.Property<string>("Photo")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
 
                     b.HasKey("Id");
 
@@ -316,7 +327,7 @@ namespace GymSystemG2AL.Migrations
 
                     b.ToTable("Trainers", t =>
                         {
-                            t.HasCheckConstraint("GymUserValidEmailCheck", "Email Like '_%@_%._&'");
+                            t.HasCheckConstraint("GymUserValidEmailCheck", "Email Like '_%@_%._%'");
 
                             t.HasCheckConstraint("GymUserValidPhoneCheck", "Phone Like '01%' and Phone Not Like '%[^0-9]%'");
                         });

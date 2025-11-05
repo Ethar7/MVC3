@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GymSystemG2AL.Migrations
 {
     [DbContext(typeof(GymSystemDBContext))]
-    [Migration("20251105121818_InitialCreat")]
-    partial class InitialCreat
+    [Migration("20251105193657_InitialCreattee")]
+    partial class InitialCreattee
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -60,11 +60,9 @@ namespace GymSystemG2AL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
-
                     b.Property<decimal>("Height")
-                        .HasColumnType("decimal(18,2)");
+                        .HasPrecision(5, 2)
+                        .HasColumnType("decimal(5,2)");
 
                     b.Property<int>("MemberId")
                         .HasColumnType("int");
@@ -72,18 +70,16 @@ namespace GymSystemG2AL.Migrations
                     b.Property<string>("Note")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("UpdatedAt")
-                        .HasColumnType("datetime2");
-
                     b.Property<decimal>("Weight")
-                        .HasColumnType("decimal(18,2)");
+                        .HasPrecision(5, 2)
+                        .HasColumnType("decimal(5,2)");
 
                     b.HasKey("Id");
 
                     b.HasIndex("MemberId")
                         .IsUnique();
 
-                    b.ToTable("HealthRecords");
+                    b.ToTable("HealthRecords", (string)null);
                 });
 
             modelBuilder.Entity("GymSystemG2AL.Entities.Member", b =>
@@ -106,7 +102,7 @@ namespace GymSystemG2AL.Migrations
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasMaxLength(100)
-                        .HasColumnType("varchar");
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<int>("Gender")
                         .HasColumnType("int");
@@ -114,18 +110,20 @@ namespace GymSystemG2AL.Migrations
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(50)
-                        .HasColumnType("varchar");
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("Phone")
                         .IsRequired()
                         .HasMaxLength(11)
-                        .HasColumnType("varchar");
+                        .HasColumnType("nvarchar(11)");
 
                     b.Property<string>("Photo")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("UpdatedAt")
-                        .HasColumnType("datetime2");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
 
                     b.HasKey("Id");
 
@@ -135,12 +133,7 @@ namespace GymSystemG2AL.Migrations
                     b.HasIndex("Phone")
                         .IsUnique();
 
-                    b.ToTable("Members", t =>
-                        {
-                            t.HasCheckConstraint("GymUserValidEmailCheck", "Email Like '_%@_%._&'");
-
-                            t.HasCheckConstraint("GymUserValidPhoneCheck", "Phone Like '01%' and Phone Not Like '%[^0-9]%'");
-                        });
+                    b.ToTable("Members", (string)null);
                 });
 
             modelBuilder.Entity("GymSystemG2AL.Entities.MemberSession", b =>
@@ -337,11 +330,9 @@ namespace GymSystemG2AL.Migrations
 
                     b.ToTable("Trainers", t =>
                         {
-                            t.HasCheckConstraint("GymUserValidEmailCheck", "Email Like '_%@_%._&'")
-                                .HasName("GymUserValidEmailCheck1");
+                            t.HasCheckConstraint("GymUserValidEmailCheck", "Email Like '_%@_%._%'");
 
-                            t.HasCheckConstraint("GymUserValidPhoneCheck", "Phone Like '01%' and Phone Not Like '%[^0-9]%'")
-                                .HasName("GymUserValidPhoneCheck1");
+                            t.HasCheckConstraint("GymUserValidPhoneCheck", "Phone Like '01%' and Phone Not Like '%[^0-9]%'");
                         });
                 });
 
@@ -364,19 +355,18 @@ namespace GymSystemG2AL.Migrations
                                 .HasColumnType("int");
 
                             b1.Property<int>("BuildingNumber")
-                                .HasColumnType("int");
+                                .HasColumnType("int")
+                                .HasColumnName("Address_BuildingNumber");
 
                             b1.Property<string>("City")
                                 .IsRequired()
                                 .HasMaxLength(30)
-                                .HasColumnType("varchar")
-                                .HasColumnName("City");
+                                .HasColumnType("nvarchar(30)");
 
                             b1.Property<string>("Street")
                                 .IsRequired()
                                 .HasMaxLength(30)
-                                .HasColumnType("varchar")
-                                .HasColumnName("Street");
+                                .HasColumnType("nvarchar(30)");
 
                             b1.HasKey("MemberId");
 

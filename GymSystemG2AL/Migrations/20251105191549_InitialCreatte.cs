@@ -5,7 +5,7 @@
 namespace GymSystemG2AL.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreat : Migration
+    public partial class InitialCreatte : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

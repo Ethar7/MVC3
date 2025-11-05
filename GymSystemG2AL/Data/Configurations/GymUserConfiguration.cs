@@ -24,10 +24,9 @@ namespace GymSystemG2AL.Data.Configurations
             builder.Property(X => X.Phone)
                 .HasColumnType("varchar")
                 .HasMaxLength(11);
-
             builder.ToTable(Tb =>
             {
-                Tb.HasCheckConstraint("GymUserValidEmailCheck", "Email Like '_%@_%._&'");
+                Tb.HasCheckConstraint("GymUserValidEmailCheck", "Email Like '_%@_%._%'");
                 Tb.HasCheckConstraint("GymUserValidPhoneCheck", "Phone Like '01%' and Phone Not Like '%[^0-9]%'");
 
             });

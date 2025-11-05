@@ -51,8 +51,6 @@
 //         }
 //     }
 // }
-
-
 using GymSystemG2AL.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
@@ -72,7 +70,13 @@ namespace GymSystemG2AL.Data.Configurations
             // Map CreatedAt as JoinDate
             builder.Property(m => m.CreatedAt)
                    .HasColumnName("JoinDate")
-                   .HasDefaultValueSql("GETDATE()");
+                   .HasDefaultValueSql("GETDATE()")
+                   .IsRequired();
+
+            // UpdatedAt
+            builder.Property(m => m.UpdatedAt)
+                   .HasDefaultValueSql("GETDATE()")
+                   .IsRequired();
 
             // Properties
             builder.Property(m => m.Name)
@@ -110,11 +114,8 @@ namespace GymSystemG2AL.Data.Configurations
                    .WithOne(hr => hr.Member)
                    .HasForeignKey<HealthRecord>(hr => hr.MemberId)
                    .OnDelete(DeleteBehavior.Cascade);
-
-            // Ignore UpdatedAt if not needed
-            builder.Ignore(m => m.UpdatedAt);
-            builder.Ignore(m => m.CreatedAt);
         }
     }
 }
+
 

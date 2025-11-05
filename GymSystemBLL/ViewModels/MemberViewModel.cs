@@ -7,7 +7,7 @@ using GymSystemG2AL.Entities;
 
 namespace GymSystemBLL.ViewModels
 {
-    internal class MemberViewModel
+    public class MemberViewModel
     {
         public int Id { get; set; }
         public string? Photo { get; set; }
@@ -23,7 +23,9 @@ namespace GymSystemBLL.ViewModels
         public string? MemberShipStartDate { get; set; }
         public string? MemberShipEndDate { get; set; }
 
-        public string? Address{ get; set; }
+        public string? Address { get; set; }
+        
+        public HealthViewModel? HealthRecord { get; set; }
 
 
     }

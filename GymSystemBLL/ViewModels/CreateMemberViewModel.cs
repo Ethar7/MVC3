@@ -53,6 +53,6 @@ namespace GymSystemBLL.ViewModels
 
         //HealthViewModel
 
-        public HealthViewModel HealthViewModel { get; set; } = null!;
+        public HealthViewModel HealthViewModel { get; set; } = new HealthViewModel();
     }
 }

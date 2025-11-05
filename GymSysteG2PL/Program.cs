@@ -3,6 +3,10 @@ using Microsoft.EntityFrameworkCore;
 using GymSystemG2AL.Repositories.Classes;
 using GymSystemG2AL.Data.DataSeed;
 using GymSystemBLL;
+using GymSystemG2AL.Entities;
+using System.ComponentModel.Design.Serialization;
+using GymSystemBLL.Services.Interfaces;
+using GymSystemBLL.Services.Classes;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -26,6 +30,7 @@ builder.Services.AddScoped<IPlanRepository, PlanRepository>();
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<ISessionRepository, SessionRepository>();
 builder.Services.AddAutoMapper(X => X.AddProfile(new MappingProfiles()));
+builder.Services.AddScoped<IMemberService, MemberService>();
 var app = builder.Build();
 
 #region  Data Seed

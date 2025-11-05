@@ -9,7 +9,7 @@ using GymSystemG2AL.Entities;
 
 namespace GymSystemBLL.Services.Interfaces
 {
-    internal interface IMemberService
+    public interface IMemberService
     {
         IEnumerable<MemberViewModel> GetAllMembers();
 
