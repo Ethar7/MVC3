@@ -17,8 +17,124 @@
       "PackagePath": "staticwebassets/css/site.css"
     },
     {
+      "Id": "/home/ethar/Desktop/MVC3/GymSysteG2PL/wwwroot/css/style.css",
+      "PackagePath": "staticwebassets/css/style.css"
+    },
+    {
       "Id": "/home/ethar/Desktop/MVC3/GymSysteG2PL/wwwroot/favicon.ico",
       "PackagePath": "staticwebassets/favicon.ico"
+    },
+    {
+      "Id": "/home/ethar/Desktop/MVC3/GymSysteG2PL/wwwroot/images/Ellipse 7.jpg",
+      "PackagePath": "staticwebassets/images/Ellipse 7.jpg"
+    },
+    {
+      "Id": "/home/ethar/Desktop/MVC3/GymSysteG2PL/wwwroot/images/Theo Vance.jpg",
+      "PackagePath": "staticwebassets/images/Theo Vance.jpg"
+    },
+    {
+      "Id": "/home/ethar/Desktop/MVC3/GymSysteG2PL/wwwroot/images/about p1.jpg",
+      "PackagePath": "staticwebassets/images/about p1.jpg"
+    },
+    {
+      "Id": "/home/ethar/Desktop/MVC3/GymSysteG2PL/wwwroot/images/about p2.jpg",
+      "PackagePath": "staticwebassets/images/about p2.jpg"
+    },
+    {
+      "Id": "/home/ethar/Desktop/MVC3/GymSysteG2PL/wwwroot/images/about p3.jpg",
+      "PackagePath": "staticwebassets/images/about p3.jpg"
+    },
+    {
+      "Id": "/home/ethar/Desktop/MVC3/GymSysteG2PL/wwwroot/images/action dots.jpg",
+      "PackagePath": "staticwebassets/images/action dots.jpg"
+    },
+    {
+      "Id": "/home/ethar/Desktop/MVC3/GymSysteG2PL/wwwroot/images/card-header.jpg",
+      "PackagePath": "staticwebassets/images/card-header.jpg"
+    },
+    {
+      "Id": "/home/ethar/Desktop/MVC3/GymSysteG2PL/wwwroot/images/dumbbell.jpg",
+      "PackagePath": "staticwebassets/images/dumbbell.jpg"
+    },
+    {
+      "Id": "/home/ethar/Desktop/MVC3/GymSysteG2PL/wwwroot/images/edit.jpg",
+      "PackagePath": "staticwebassets/images/edit.jpg"
+    },
+    {
+      "Id": "/home/ethar/Desktop/MVC3/GymSysteG2PL/wwwroot/images/facebook-f.jpg",
+      "PackagePath": "staticwebassets/images/facebook-f.jpg"
+    },
+    {
+      "Id": "/home/ethar/Desktop/MVC3/GymSysteG2PL/wwwroot/images/feature icon.jpg",
+      "PackagePath": "staticwebassets/images/feature icon.jpg"
+    },
+    {
+      "Id": "/home/ethar/Desktop/MVC3/GymSysteG2PL/wwwroot/images/icon.jpg",
+      "PackagePath": "staticwebassets/images/icon.jpg"
+    },
+    {
+      "Id": "/home/ethar/Desktop/MVC3/GymSysteG2PL/wwwroot/images/icon.svg",
+      "PackagePath": "staticwebassets/images/icon.svg"
+    },
+    {
+      "Id": "/home/ethar/Desktop/MVC3/GymSysteG2PL/wwwroot/images/info 1.jpg",
+      "PackagePath": "staticwebassets/images/info 1.jpg"
+    },
+    {
+      "Id": "/home/ethar/Desktop/MVC3/GymSysteG2PL/wwwroot/images/line-md_phone-filled.jpg",
+      "PackagePath": "staticwebassets/images/line-md_phone-filled.jpg"
+    },
+    {
+      "Id": "/home/ethar/Desktop/MVC3/GymSysteG2PL/wwwroot/images/logo.jpg",
+      "PackagePath": "staticwebassets/images/logo.jpg"
+    },
+    {
+      "Id": "/home/ethar/Desktop/MVC3/GymSysteG2PL/wwwroot/images/mdi_whatsapp.jpg",
+      "PackagePath": "staticwebassets/images/mdi_whatsapp.jpg"
+    },
+    {
+      "Id": "/home/ethar/Desktop/MVC3/GymSysteG2PL/wwwroot/images/message icon.jpg",
+      "PackagePath": "staticwebassets/images/message icon.jpg"
+    },
+    {
+      "Id": "/home/ethar/Desktop/MVC3/GymSysteG2PL/wwwroot/images/phone icon.jpg",
+      "PackagePath": "staticwebassets/images/phone icon.jpg"
+    },
+    {
+      "Id": "/home/ethar/Desktop/MVC3/GymSysteG2PL/wwwroot/images/search icon.jpg",
+      "PackagePath": "staticwebassets/images/search icon.jpg"
+    },
+    {
+      "Id": "/home/ethar/Desktop/MVC3/GymSysteG2PL/wwwroot/images/star.svg",
+      "PackagePath": "staticwebassets/images/star.svg"
+    },
+    {
+      "Id": "/home/ethar/Desktop/MVC3/GymSysteG2PL/wwwroot/images/twitter.jpg",
+      "PackagePath": "staticwebassets/images/twitter.jpg"
+    },
+    {
+      "Id": "/home/ethar/Desktop/MVC3/GymSysteG2PL/wwwroot/images/why us images.jpg",
+      "PackagePath": "staticwebassets/images/why us images.jpg"
+    },
+    {
+      "Id": "/home/ethar/Desktop/MVC3/GymSysteG2PL/wwwroot/images/why us images.svg",
+      "PackagePath": "staticwebassets/images/why us images.svg"
+    },
+    {
+      "Id": "/home/ethar/Desktop/MVC3/GymSysteG2PL/wwwroot/images/workout 1.jpg",
+      "PackagePath": "staticwebassets/images/workout 1.jpg"
+    },
+    {
+      "Id": "/home/ethar/Desktop/MVC3/GymSysteG2PL/wwwroot/images/workout 2.jpg",
+      "PackagePath": "staticwebassets/images/workout 2.jpg"
+    },
+    {
+      "Id": "/home/ethar/Desktop/MVC3/GymSysteG2PL/wwwroot/images/workout 3.jpg",
+      "PackagePath": "staticwebassets/images/workout 3.jpg"
+    },
+    {
+      "Id": "/home/ethar/Desktop/MVC3/GymSysteG2PL/wwwroot/images/x-circle 1.jpg",
+      "PackagePath": "staticwebassets/images/x-circle 1.jpg"
     },
     {
       "Id": "/home/ethar/Desktop/MVC3/GymSysteG2PL/wwwroot/js/site.js",

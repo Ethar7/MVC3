@@ -9,9 +9,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace GymSystemG2AL.Data.Configurations
 {
-    internal class GymUserConfiguration<T> : IEntityTypeConfiguration<T> where T : GymUser
+    internal abstract class GymUserConfiguration<T> : IEntityTypeConfiguration<T> where T : GymUser
     {
-        public void Configure(EntityTypeBuilder<T> builder)
+        public virtual void Configure(EntityTypeBuilder<T> builder)
         {
             builder.Property(X => X.Name)
                 .HasColumnType("varchar")

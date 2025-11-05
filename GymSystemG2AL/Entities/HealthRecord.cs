@@ -11,11 +11,15 @@ namespace GymSystemG2AL.Entities
     {
         public decimal Height { get; set; }
         public decimal Weight { get; set; }
-        public string BloodType { get; set; }
+        public string BloodType { get; set; } = string.Empty;
 
         public string? Note { get; set; }
 
         // LastUpdate => Use Column Where Existed in BaseEntity [UpdatedAt]
+
+        public int MemberId { get; set; }
+        public Member Member { get; set; } = null!;
+
     }
 
 }

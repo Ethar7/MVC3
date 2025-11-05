@@ -36,35 +36,35 @@ namespace GymSystemBLL.Services.Classes
         // }
 
 
-        public MemberService(IUnitOfWork unitOfWork)
-        {
-            _unitOfWork = unitOfWork;
-        }
-        // dont forget to register IUnit of work service in class program
-        public bool CreateMembers(CreateMemberViewModel createMember)
+                public MemberService(IUnitOfWork unitOfWork)
+                {
+                    _unitOfWork = unitOfWork;
+                }
+                // dont forget to register IUnit of work service in class program
+                public bool CreateMembers(CreateMemberViewModel createMember)
         {
             try
             {
+                // التحقق من أن البريد والهاتف فريدين
+                if (IsEmailExist(createMember.Email) || IsPhoneExist(createMember.Phone))
+                    return false;
 
-                //check if phone or Email are Unique
-
-                if (IsEmailExist(createMember.Email) || IsPhoneExist(createMember.Phone)) return false;
-
+                // إنشاء كائن Member مع HealthRecord جاهز
                 var member = new Member()
                 {
                     Name = createMember.Name,
                     Email = createMember.Email,
                     Phone = createMember.Phone,
-
                     Gender = createMember.Gender,
                     DateOfBirth = createMember.DateOfBirth,
-
                     Address = new Address()
                     {
                         BuildingNumber = createMember.BuildingNumber,
                         Street = createMember.Street,
-                        City = createMember.City,
+                        City = createMember.City
                     },
+
+                    
                     HealthRecord = new HealthRecord()
                     {
                         Height = createMember.HealthViewModel.Height,
@@ -73,12 +73,15 @@ namespace GymSystemBLL.Services.Classes
                         Note = createMember.HealthViewModel.Note
                     }
                 };
+
+            
                 _unitOfWork.GetRepository<Member>().Add(member);
+
+            
                 return _unitOfWork.SaveChanges() > 0;
             }
-            catch (System.Exception)
+            catch
             {
-
                 throw;
             }
         }
@@ -117,6 +120,7 @@ namespace GymSystemBLL.Services.Classes
                 Phone = X.Phone,
                 Photo = X.Photo,
                 Gender = X.Gender.ToString()
+
             });
             return MemberViewModel;
         }

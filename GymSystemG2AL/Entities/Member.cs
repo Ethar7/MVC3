@@ -18,18 +18,18 @@ namespace GymSystemG2AL.Entities
         #region 1 : 1 RS Between Member HealthRecord
         // Nav Property
 
-        public HealthRecord HealthRecord { get; set; }// One
+        public HealthRecord? HealthRecord { get; set; } = new HealthRecord();// One
 
         
         #endregion
     
         #region M : M Between MemberPlan
 
-        public ICollection<MemberShip> MemberShips { get; set; }
+        public ICollection<MemberShip>? MemberShips { get; set; }
         #endregion
         #region M : M Between MemberSessions
 
-        public ICollection<MemberSession> MemberSessions{ get; set; }
+        public ICollection<MemberSession>? MemberSessions{ get; set; }
         #endregion
     }
 }

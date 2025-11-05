@@ -183,3 +183,7 @@
 /home/ethar/Desktop/MVC3/GymSysteG2PL/bin/Debug/net9.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 /home/ethar/Desktop/MVC3/GymSysteG2PL/obj/Debug/net9.0/compressed/warmi4dmpl-i4dz541x2r.gz
 /home/ethar/Desktop/MVC3/GymSysteG2PL/obj/Debug/net9.0/compressed/kp5dfjyfgy-7pql05tc3n.gz
+/home/ethar/Desktop/MVC3/GymSysteG2PL/obj/Debug/net9.0/compressed/h55bmqj6jp-gk6je6itwo.gz
+/home/ethar/Desktop/MVC3/GymSysteG2PL/obj/Debug/net9.0/compressed/yao8cwh36h-ra89dd10vu.gz
+/home/ethar/Desktop/MVC3/GymSysteG2PL/obj/Debug/net9.0/compressed/rh4gui29np-7y25oh2dzs.gz
+/home/ethar/Desktop/MVC3/GymSysteG2PL/obj/Debug/net9.0/compressed/ebqvakn283-e8g7nh56kj.gz
