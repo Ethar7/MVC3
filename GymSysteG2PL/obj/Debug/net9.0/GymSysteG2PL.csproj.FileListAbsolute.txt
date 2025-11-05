@@ -96,7 +96,6 @@
 /home/ethar/Desktop/MVC3/GymSysteG2PL/obj/Debug/net9.0/GymSysteG2PL.MvcApplicationPartsAssemblyInfo.cache
 /home/ethar/Desktop/MVC3/GymSysteG2PL/obj/Debug/net9.0/GymSysteG2PL.RazorAssemblyInfo.cache
 /home/ethar/Desktop/MVC3/GymSysteG2PL/obj/Debug/net9.0/GymSysteG2PL.RazorAssemblyInfo.cs
-/home/ethar/Desktop/MVC3/GymSysteG2PL/obj/Debug/net9.0/GymSysteG2PL.sourcelink.json
 /home/ethar/Desktop/MVC3/GymSysteG2PL/obj/Debug/net9.0/scopedcss/Views/Shared/_Layout.cshtml.rz.scp.css
 /home/ethar/Desktop/MVC3/GymSysteG2PL/obj/Debug/net9.0/scopedcss/bundle/GymSysteG2PL.styles.css
 /home/ethar/Desktop/MVC3/GymSysteG2PL/obj/Debug/net9.0/scopedcss/projectbundle/GymSysteG2PL.bundle.scp.css
