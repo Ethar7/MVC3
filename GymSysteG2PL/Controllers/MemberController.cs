@@ -1,6 +1,8 @@
 using GymSystemBLL.Services.Interfaces;
 using GymSystemBLL.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
+using Microsoft.Identity.Client;
 
 namespace GymSysteG2PL.Controllers
 {
@@ -77,7 +79,7 @@ namespace GymSysteG2PL.Controllers
             if (!ModelState.IsValid)
             {
                 ModelState.AddModelError("DataInvalid", "Check Data and Missing Fields");
-                return View("Create", createMember); 
+                return View("Create", createMember);
             }
 
 
@@ -94,6 +96,47 @@ namespace GymSysteG2PL.Controllers
                 return View("Create", createMember);
             }
         }
+        #endregion
+
+        #region  EditMember
+
+        public ActionResult MemberEdit(int id)
+        {
+            if (id <= 0)
+            {
+                TempData["ErrorMessage"] = "Id cant Be 0 or Negative Number!";
+                return RedirectToAction(nameof(Index));
+            }
+            var Member = _memberService.GetMemberToUpdate(id);
+            if (Member == null)
+            {
+                TempData["ErrorMessage"] = "Member Not Found !";
+                return RedirectToAction(nameof(Index));
+            }
+            return View(Member);
+        }
+        [HttpPost]
+        public ActionResult MemberEdit([FromRoute]int id, MemberToUpdateViewModel memberToUpdate)
+        {
+            if (!ModelState.IsValid)
+            {
+                ModelState.AddModelError("DataInvalid", "Check Data And Missing Fields");
+                return View(nameof(MemberEdit), memberToUpdate);
+            }
+            var Result = _memberService.UpdateMemberDetails(id, memberToUpdate);
+
+            if (Result)
+            {
+                TempData["SuccessMessage"] = "Member Updated Successfully";
+            }
+            else
+            {
+                TempData["ErrorMessage"] = "Failed To Update Member";
+            }
+
+            return RedirectToAction(nameof(Index));
+        }
+
+        #endregion
     }
 }
-#endregion
