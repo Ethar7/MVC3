@@ -1,13 +1,14 @@
 using GymSystemBLL.Services.Interfaces;
+using GymSystemBLL.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GymSysteG2PL.Controllers
 {
-    public class MembersController : Controller
+    public class MemberController : Controller
     {
         private readonly IMemberService _memberService;
 
-        public MembersController(IMemberService memberService)
+        public MemberController(IMemberService memberService)
         {
             _memberService = memberService;
         }
@@ -40,7 +41,7 @@ namespace GymSysteG2PL.Controllers
         }
 
         #endregion
-    
+
         #region  Get Health Record
         public ActionResult HealthRecordDetails(int id)
         {
@@ -61,5 +62,38 @@ namespace GymSysteG2PL.Controllers
             return View(HealthRecord);
         }
         #endregion
+
+        #region create
+
+        public ActionResult Create()
+        {
+            return View();
+        }
+        // Add to DB
+        [HttpPost]
+        public ActionResult CreateMember(CreateMemberViewModel createMember)
+        {
+
+            if (!ModelState.IsValid)
+            {
+                ModelState.AddModelError("DataInvalid", "Check Data and Missing Fields");
+                return View("Create", createMember); 
+            }
+
+
+            bool result = _memberService.CreateMembers(createMember);
+
+            if (result)
+            {
+                TempData["SuccessMessage"] = "Member Created Successfully!";
+                return RedirectToAction(nameof(Index));
+            }
+            else
+            {
+                TempData["ErrorMessage"] = "Error In Creating Member!";
+                return View("Create", createMember);
+            }
+        }
     }
 }
+#endregion

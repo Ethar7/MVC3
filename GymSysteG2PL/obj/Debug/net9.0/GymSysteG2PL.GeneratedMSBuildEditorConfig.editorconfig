@@ -24,16 +24,20 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/ethar/Desktop/MVC3/GymSysteG2PL/Views/Members/HealthRecordDetails.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWVtYmVycy9IZWFsdGhSZWNvcmREZXRhaWxzLmNzaHRtbA==
+[/home/ethar/Desktop/MVC3/GymSysteG2PL/Views/Member/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWVtYmVyL0NyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/ethar/Desktop/MVC3/GymSysteG2PL/Views/Members/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWVtYmVycy9JbmRleC5jc2h0bWw=
+[/home/ethar/Desktop/MVC3/GymSysteG2PL/Views/Member/HealthRecordDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWVtYmVyL0hlYWx0aFJlY29yZERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/ethar/Desktop/MVC3/GymSysteG2PL/Views/Members/MemberDetails.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWVtYmVycy9NZW1iZXJEZXRhaWxzLmNzaHRtbA==
+[/home/ethar/Desktop/MVC3/GymSysteG2PL/Views/Member/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWVtYmVyL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/ethar/Desktop/MVC3/GymSysteG2PL/Views/Member/MemberDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWVtYmVyL01lbWJlckRldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/home/ethar/Desktop/MVC3/GymSysteG2PL/Views/Shared/Error.cshtml]

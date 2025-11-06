@@ -1,10 +1,13 @@
 @model IEnumerable<MemberViewModel>
+            @if (@TempData["SuccessMessage"] is not null)
+            {
 
-            @* <div id="Alert" class="alert alert-success alert-dismissible fade show">
+            <div id="Alert" class="alert alert-success alert-dismissible fade show">
                 <i class="bi bi-check-circle-fill me-2"></i>
-                Member Created Successfully
+                @TempData["SuccessMessage"]
                 <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-            </div> *@
+            </div>
+            }
             @if (@TempData["ErrorMessage"] is not null)
             {
 
@@ -59,7 +62,7 @@
                                             <ul class="dropdown-menu dropdown-menu-start"
                                                 aria-labelledby="dropdownMenuButton-@member.Id">
                                                 <li>
-                                                    <a asp-controller="Members" asp-action="MemberDetails" asp-route-id="@member.Id"
+                                                    <a asp-controller="Member" asp-action="MemberDetails" asp-route-id="@member.Id"
                                                        class="dropdown-item d-flex align-items-center gap-3">
                                                         <img src="~/images/info 1.jpg" alt="info icon"
                                                              style="width: 20px; height: 20px;" />
@@ -67,7 +70,7 @@
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a asp-controller="Members" asp-action="HealthRecordDetails"  asp-route-id="@member.Id"
+                                                    <a asp-controller="Member" asp-action="HealthRecordDetails"  asp-route-id="@member.Id"
                                                        class="dropdown-item d-flex align-items-center gap-3">
                                                         <img src="~/images/info 1.jpg" alt="info icon"
                                                              style="width: 20px; height: 20px;" />
