@@ -1,4 +1,19 @@
 @model IEnumerable<MemberViewModel>
+
+            @* <div id="Alert" class="alert alert-success alert-dismissible fade show">
+                <i class="bi bi-check-circle-fill me-2"></i>
+                Member Created Successfully
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            </div> *@
+            @if (@TempData["ErrorMessage"] is not null)
+            {
+
+            <div id="Alert" class="alert alert-danger alert-dismissible fade show">
+                <i class="bi bi-exclamation-triangle-fill me-2"></i>
+                @TempData["ErrorMessage"]
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            </div>
+            }
             <div class="container">
                 <header class="d-flex justify-content-end mt-5 mb-4 align-items-center">
                     <a href="\Member\Create" class="btn btn-fill fw-medium rounded-pill px-3 py-3">
@@ -52,7 +67,7 @@
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="\Member\HealthRecordDetails\memberId"
+                                                    <a asp-controller="Members" asp-action="HealthRecordDetails"  asp-route-id="@member.Id"
                                                        class="dropdown-item d-flex align-items-center gap-3">
                                                         <img src="~/images/info 1.jpg" alt="info icon"
                                                              style="width: 20px; height: 20px;" />
