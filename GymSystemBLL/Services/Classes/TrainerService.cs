@@ -197,17 +197,27 @@ namespace GymSystemBLL.Services.Classes
                     Phone = createTrainer.Phone,
                     Gender = createTrainer.Gender,
                     Special = createTrainer.Special,
+                    DateOfBirth = createTrainer.DateOfBirth,
+                    Address = new Address
+                    {
+                        BuildingNumber = createTrainer.BuildingNumber,
+                        Street = createTrainer.Street,
+                        City = createTrainer.City
+                    },
+
                     CreatedAt = DateTime.Now
                 };
 
                 _unitOfWork.GetRepository<Trainer>().Add(trainer);
                 return _unitOfWork.SaveChanges() > 0;
             }
-            catch
+            catch (Exception ex)
             {
-                return false;
+                // temporarily rethrow or log so you can see the actual error while debugging
+                throw new Exception("Error in CreateTrainer: " + ex.Message, ex);
             }
         }
+
 
         // Get all trainers
         public IEnumerable<TrainerViewModel> GetAllTrainers()
@@ -240,6 +250,10 @@ namespace GymSystemBLL.Services.Classes
                 Phone = trainer.Phone,
                 Gender = trainer.Gender.ToString(),
                 Special = trainer.Special.ToString(),
+                BuildingNumber = trainer.Address.BuildingNumber.ToString(),
+                Street = trainer.Address.Street,
+                City = trainer.Address.City
+                
             };
         }
 
@@ -254,34 +268,45 @@ namespace GymSystemBLL.Services.Classes
                 Name = trainer.Name,
                 Email = trainer.Email,
                 Phone = trainer.Phone,
-                Special = trainer.Special
+                Special = trainer.Special,
+                BuildingNumber = trainer.Address.BuildingNumber,
+                City = trainer.Address.City,
+                Street = trainer.Address.Street
             };
         }
 
         // Update trainer info
-        public bool UpdateTrainerDetails(int id, TrainerToUpdateViewModel updateTrainer)
-        {
-            var trainer = _unitOfWork.GetRepository<Trainer>().GetBYId(id);
-            if (trainer is null) return false;
+                public bool UpdateTrainerDetails(int id, TrainerToUpdateViewModel updateTrainer)
+                {
+                var trainer = _unitOfWork.GetRepository<Trainer>().GetBYId(id);
+                if (trainer is null) return false;
 
-            if (IsEmailExist(updateTrainer.Email, id) || IsPhoneExist(updateTrainer.Phone, id))
-                return false;
+                if (IsEmailExist(updateTrainer.Email, id) || IsPhoneExist(updateTrainer.Phone, id))
+                    return false;
 
-            try
-            {
-                trainer.Name = updateTrainer.Name;
-                trainer.Email = updateTrainer.Email;
-                trainer.Phone = updateTrainer.Phone;
-                trainer.Special = updateTrainer.Special;
-                trainer.UpdatedAt = DateTime.Now;
+                try
+                {
+                    trainer.Name = updateTrainer.Name;
+                    trainer.Email = updateTrainer.Email;
+                    trainer.Phone = updateTrainer.Phone;
+                    trainer.Special = updateTrainer.Special;
+                    trainer.UpdatedAt = DateTime.Now;
 
-                _unitOfWork.GetRepository<Trainer>().Update(trainer);
-                return _unitOfWork.SaveChanges() > 0;
-            }
-            catch
-            {
-                return false;
-            }
+                
+                    trainer.Address = new Address
+                    {
+                        BuildingNumber = updateTrainer.BuildingNumber,
+                        Street = updateTrainer.Street,
+                        City = updateTrainer.City
+                    };
+
+                    _unitOfWork.GetRepository<Trainer>().Update(trainer);
+                    return _unitOfWork.SaveChanges() > 0;
+                }
+                catch
+                {
+                    return false;
+                }
         }
 
         // Remove trainer if no future sessions

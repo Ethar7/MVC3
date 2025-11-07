@@ -11,6 +11,7 @@ namespace GymSystemBLL.ViewModels
         public Gender Gender { get; set; }          
         public Specialization Special { get; set; } 
         public DateOnly DateOfBirth { get; set; }
+
         public DateTime HireDate { get; set; } = DateTime.Now;
 
         

@@ -32,6 +32,8 @@ builder.Services.AddScoped<ISessionRepository, SessionRepository>();
 builder.Services.AddAutoMapper(X => X.AddProfile(new MappingProfiles()));
 builder.Services.AddScoped<IMemberService, MemberService>();
 builder.Services.AddScoped<IAnalyticService, AnalyticService>();
+builder.Services.AddScoped<ITrainerService, TrainerService>();
+
 var app = builder.Build();
 
 #region  Data Seed
