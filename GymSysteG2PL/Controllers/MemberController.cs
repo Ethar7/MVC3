@@ -116,7 +116,7 @@ namespace GymSysteG2PL.Controllers
             return View(Member);
         }
         [HttpPost]
-        public ActionResult MemberEdit([FromRoute]int id, MemberToUpdateViewModel memberToUpdate)
+        public ActionResult MemberEdit([FromRoute] int id, MemberToUpdateViewModel memberToUpdate)
         {
             if (!ModelState.IsValid)
             {
@@ -134,6 +134,41 @@ namespace GymSysteG2PL.Controllers
                 TempData["ErrorMessage"] = "Failed To Update Member";
             }
 
+            return RedirectToAction(nameof(Index));
+        }
+
+        #endregion
+
+        #region DeleteMember
+        public ActionResult Delete(int id)
+        {
+            if (id <= 0)
+            {
+                TempData["ErrorMessage"] = "Id Cant be 0 or negative number!";
+                return RedirectToAction(nameof(Index));
+            }
+            var Member = _memberService.GetMemberDetails(id);
+            if (Member == null)
+            {
+                TempData["ErrorMessage"] = "Member Not Found";
+                return RedirectToAction(nameof(Index));
+            }
+            ViewBag.MemberId = id;
+            ViewBag.MemberName = Member.Name;
+            return View();
+        }
+        
+        public ActionResult DeleteConfirmed([FromForm]int id)
+        {
+            var Result = _memberService.RemoveMember(id);
+            if (Result)
+            {
+                TempData["SuccessMessage"] = "Member Delete Successfully";
+            }
+            else
+            {
+                TempData["ErrorMessage"] = "Failed To Delete Member !";
+            }
             return RedirectToAction(nameof(Index));
         }
 

@@ -443,11 +443,19 @@ namespace GymSystemBLL.Services.Classes
             var Member = MemberRepo.GetBYId(MemberId);
             if (Member == null) return false;
 
-            var HasActiveMemberSession = MemberSessionRepo
-                .GetAll(x => x.MemberId == MemberId && x.Session.StartDate > DateTime.Now)
-                .Any();
+            // var HasActiveMemberSession = MemberSessionRepo
+            //     .GetAll(x => x.MemberId == MemberId && x.Session.StartDate > DateTime.Now)
+            //     .Any();
 
-            if (HasActiveMemberSession) return false;
+            // Get All Sessions Ids
+
+            var SessionIDs = _unitOfWork.GetRepository<MemberSession>()
+            .GetAll(X => X.MemberId == MemberId).Select(X => X.SessionId);
+
+            var HasActiveSession = _unitOfWork.GetRepository<Session>()
+            .GetAll(X => SessionIDs.Contains(X.Id) && X.StartDate > DateTime.Now).Any();
+
+            if (HasActiveSession) return false;
 
             var Membership = MemberShipRepo.GetAll(x => x.MemberId == MemberId);
 
