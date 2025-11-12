@@ -5,7 +5,6 @@ namespace GymSystemBLL.ViewModels.SessionViewModel
 {
     public class CreateSessionViewModel
     {
-        [Required(ErrorMessage = "Session name is required.")]
         [StringLength(100, ErrorMessage = "Session name cannot exceed 100 characters.")]
         public string Name { get; set; } = string.Empty;
 
@@ -18,9 +17,11 @@ namespace GymSystemBLL.ViewModels.SessionViewModel
         public int CategoryId { get; set; }
 
         [Required(ErrorMessage = "Start Date is required.")]
+        [DataType(DataType.DateTime)]
         public DateTime StartDate { get; set; }
 
         [Required(ErrorMessage = "End Date is required.")]
+        [DataType(DataType.DateTime)]
         public DateTime EndDate { get; set; }
 
         [Required(ErrorMessage = "Capacity is required.")]

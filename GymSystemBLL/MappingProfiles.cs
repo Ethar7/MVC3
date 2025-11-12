@@ -23,6 +23,10 @@ namespace GymSystemBLL
 
             CreateMap<CreateSessionViewModel, Session>();
             CreateMap<UpdateSessionViewModel, Session>().ReverseMap();
+
+            CreateMap<Trainer, TrainerSelectViewModel>();
+            CreateMap<Category, CategorySelectViewModel>()
+            .ForMember(dest => dest.Name, opt => opt.MapFrom(scr => scr.CategoryName));
         }
     }
 }

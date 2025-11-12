@@ -8,6 +8,7 @@ using GymSystemBLL.Services.Interfaces;
 using GymSystemG2AL.Repositories.Interfaces;
 using GymSystemG2AL.Entities;
 using AutoMapper;
+using Microsoft.VisualBasic;
 
 namespace GymSystemBLL.Services.Classes
 {
@@ -31,7 +32,7 @@ namespace GymSystemBLL.Services.Classes
                 if (!IsTrainerExsist(createSession.TrainerId)) return false;
                 if (!IsCategoryExsist(createSession.CategoryId)) return false;
                 if (!IsDateTimeValid(createSession.StartDate, createSession.EndDate)) return false;
-                if (createSession.Capacity > 25 || createSession.Capacity < 0) return false;
+                if (createSession.Capacity > 25 || createSession.Capacity < 1) return false;
 
                 var SessionEntity = _mapper.Map<Session>(createSession);
                 _unitOfWork.GetRepository<Session>().Add(SessionEntity);
@@ -137,6 +138,17 @@ namespace GymSystemBLL.Services.Classes
            }
         }
 
+        public IEnumerable<TrainerSelectViewModel> GetTrainerForSessions()
+        {
+            var Trainers = _unitOfWork.GetRepository<Trainer>().GetAll();
+            return _mapper.Map < IEnumerable<TrainerSelectViewModel>>(Trainers);
+        }
+
+        public IEnumerable<CategorySelectViewModel> GetCategoryForSession()
+        {
+            var Categories = _unitOfWork.GetRepository<Category>().GetAll();
+            return _mapper.Map<IEnumerable<CategorySelectViewModel>>(Categories);
+        }
         #region Helper Methods
 
         private bool IsTrainerExsist(int TrainerId)
@@ -187,6 +199,7 @@ namespace GymSystemBLL.Services.Classes
 
             return true;
         }
+
 
 
         #endregion
