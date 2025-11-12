@@ -33,7 +33,7 @@ builder.Services.AddAutoMapper(X => X.AddProfile(new MappingProfiles()));
 builder.Services.AddScoped<IMemberService, MemberService>();
 builder.Services.AddScoped<IAnalyticService, AnalyticService>();
 builder.Services.AddScoped<ITrainerService, TrainerService>();
-
+builder.Services.AddScoped<IPlanService, PlanService>();
 var app = builder.Build();
 
 #region  Data Seed
