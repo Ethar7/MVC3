@@ -186,8 +186,8 @@ namespace GymSystemBLL.Services.Classes
         {
             if (session is null) return false;
 
-            // if Session completed => cannot delete
-            if (session.EndDate < DateTime.Now) return false;
+            // // if Session completed => cannot delete
+            // if (session.EndDate < DateTime.Now) return false;
             // if Session Upcomming => cannot delete
             if (session.StartDate > DateTime.Now) return false;
             // if Session ongoing => Cannot delete

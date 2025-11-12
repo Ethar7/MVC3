@@ -77,7 +77,6 @@ namespace GymSysteG2PL.Controllers
         #endregion
 
 
-
         #region Edit Session
 
         public ActionResult Edit(int id)
@@ -102,7 +101,7 @@ namespace GymSysteG2PL.Controllers
         }
 
         [HttpPost]
-        
+
         public ActionResult Edit([FromRoute] int id, UpdateSessionViewModel updateSession)
         {
             if (!ModelState.IsValid)
@@ -126,12 +125,60 @@ namespace GymSysteG2PL.Controllers
 
 
         #endregion
+
+        #region Delete Session
+
+        public ActionResult Delete(int id)
+        {
+       
+            if (id <= 0)
+            {
+
+                TempData["ErrorMessage"] = "Invalid Session Id";
+                return RedirectToAction("Index");
+            }
+
+
+            var Session = _sessionService.GetSessionById(id);
+            if (Session is null)
+            {
+                TempData["ErrorMessage"] = "Session Not Found";
+                return RedirectToAction("Index");
+            }
+            ViewBag.SessionId = id;
+            return View(Session);
+
+        }
+
+        [HttpPost]
+
+        public ActionResult DeleteConfirmed(int id)
+        {
+           
+            var Result = _sessionService.RemoveSession(id);
+            if (Result)
+            {
+                TempData["SuccessMessage"] = "Session Deleted Successfully";
+            }
+            else
+            {
+                TempData["ErrorMessage"] = "Failed to Delete Session";
+                
+            }
+            return RedirectToAction("Index");
+        }
+
+        
+        #endregion
+        
+
+        #region Helper Methods
         private void LoadDropDownsForTrainers()
         {
             var Trainers = _sessionService.GetTrainerForSessions();
-            
+
             ViewBag.Trainers = new SelectList(Trainers, "Id", "Name");
-           
+
         }
 
         private void LoadDropDownsForCategories()
@@ -140,7 +187,8 @@ namespace GymSysteG2PL.Controllers
             var Categories = _sessionService.GetCategoryForSession();
             ViewBag.Categories = new SelectList(Categories, "Id", "Name");
         }
-        
+        #endregion
+
     }
 }
 
