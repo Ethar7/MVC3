@@ -13,7 +13,7 @@ namespace GymSystemG2AL.Entities
         // I will use this column as JoinDate For Member +> Configurations 
 
 
-        public string? Photo { get; set; }
+        public string Photo { get; set; } = null!;
 
         #region 1 : 1 RS Between Member HealthRecord
         // Nav Property
