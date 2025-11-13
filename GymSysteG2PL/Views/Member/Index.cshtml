@@ -1,4 +1,10 @@
+@using GymSystemBLL.Services.Classes
 @model IEnumerable<MemberViewModel>
+
+@{
+   ViewBag.Title= "Members";
+
+}
             @if (@TempData["SuccessMessage"] is not null)
             {
 

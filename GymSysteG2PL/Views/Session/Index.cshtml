@@ -1,6 +1,10 @@
 @using GymSystemBLL.ViewModels.SessionViewModel
 @model IEnumerable<SessionViewModel>
 
+@{
+    ViewBag.Title= "Sessions";
+}
+
 
 @if (TempData["SuccessMessage"] != null)
 {

@@ -1,6 +1,9 @@
 @using GymSystemBLL.ViewModels.PlanViewModel
 @model IEnumerable<PlanViewModel>
 
+@{
+    ViewBag.Title = "Plans";
+}
 
 @if (TempData["SuccessMessage"] is not null)
 {
