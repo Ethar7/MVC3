@@ -186,3 +186,13 @@
 /home/ethar/Desktop/MVC3/GymSysteG2PL/obj/Debug/net9.0/compressed/yao8cwh36h-ra89dd10vu.gz
 /home/ethar/Desktop/MVC3/GymSysteG2PL/obj/Debug/net9.0/compressed/rh4gui29np-7y25oh2dzs.gz
 /home/ethar/Desktop/MVC3/GymSysteG2PL/obj/Debug/net9.0/compressed/ebqvakn283-e8g7nh56kj.gz
+/home/ethar/Desktop/MVC3/GymSysteG2PL/bin/Debug/net9.0/Microsoft.AspNetCore.Cryptography.Internal.dll
+/home/ethar/Desktop/MVC3/GymSysteG2PL/bin/Debug/net9.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+/home/ethar/Desktop/MVC3/GymSysteG2PL/bin/Debug/net9.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+/home/ethar/Desktop/MVC3/GymSysteG2PL/bin/Debug/net9.0/Microsoft.AspNetCore.Identity.UI.dll
+/home/ethar/Desktop/MVC3/GymSysteG2PL/bin/Debug/net9.0/Microsoft.Extensions.FileProviders.Abstractions.dll
+/home/ethar/Desktop/MVC3/GymSysteG2PL/bin/Debug/net9.0/Microsoft.Extensions.FileProviders.Embedded.dll
+/home/ethar/Desktop/MVC3/GymSysteG2PL/bin/Debug/net9.0/Microsoft.Extensions.Identity.Core.dll
+/home/ethar/Desktop/MVC3/GymSysteG2PL/bin/Debug/net9.0/Microsoft.Extensions.Identity.Stores.dll
+/home/ethar/Desktop/MVC3/GymSysteG2PL/obj/Debug/net9.0/GymSysteG2PL.MvcApplicationPartsAssemblyInfo.cs
+/home/ethar/Desktop/MVC3/GymSysteG2PL/obj/Debug/net9.0/compressed/wjeo17r4pu-9wgp7jz6ei.gz

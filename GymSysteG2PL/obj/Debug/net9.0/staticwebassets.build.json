@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "9GMey2AQIXtZ7dQl4YT7GaDMKTbk5J0+63gahWegNLs=",
+  "Hash": "CDt1oDCgVZ6skuHf8rLcBQpVWLpS6qGejoXeNM5qQ7w=",
   "Source": "GymSysteG2PL",
   "BasePath": "_content/GymSysteG2PL",
   "Mode": "Default",
@@ -1382,6 +1382,27 @@
       "OriginalItemSpec": "/home/ethar/Desktop/MVC3/GymSysteG2PL/wwwroot/Files/categories.json"
     },
     {
+      "Identity": "/home/ethar/Desktop/MVC3/GymSysteG2PL/obj/Debug/net9.0/compressed/wjeo17r4pu-9wgp7jz6ei.gz",
+      "SourceId": "GymSysteG2PL",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/ethar/Desktop/MVC3/GymSysteG2PL/obj/Debug/net9.0/compressed/",
+      "BasePath": "_content/GymSysteG2PL",
+      "RelativePath": "css/AuthStyle#[.{fingerprint=9wgp7jz6ei}]?.css.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "/home/ethar/Desktop/MVC3/GymSysteG2PL/wwwroot/css/AuthStyle.css",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "p55m3yoh14",
+      "Integrity": "Y9FckZI/dWuu0velyk3bIHV/mpFWGwyF499kKu860JI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "/home/ethar/Desktop/MVC3/GymSysteG2PL/wwwroot/css/AuthStyle.css"
+    },
+    {
       "Identity": "/home/ethar/Desktop/MVC3/GymSysteG2PL/obj/Debug/net9.0/compressed/x9sg9hh99b-ttgo8qnofa.gz",
       "SourceId": "GymSysteG2PL",
       "SourceType": "Discovered",
@@ -1527,6 +1548,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/home/ethar/Desktop/MVC3/GymSysteG2PL/obj/Debug/net9.0/scopedcss/projectbundle/GymSysteG2PL.bundle.scp.css"
+    },
+    {
+      "Identity": "/home/ethar/Desktop/MVC3/GymSysteG2PL/wwwroot/css/AuthStyle.css",
+      "SourceId": "GymSysteG2PL",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/ethar/Desktop/MVC3/GymSysteG2PL/wwwroot/",
+      "BasePath": "_content/GymSysteG2PL",
+      "RelativePath": "css/AuthStyle#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "9wgp7jz6ei",
+      "Integrity": "yWS66zpphWUMt59PGM/tg94qSt1v5hNWGi77U/o7UIM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/AuthStyle.css"
     },
     {
       "Identity": "/home/ethar/Desktop/MVC3/GymSysteG2PL/wwwroot/css/site.css",
@@ -3546,6 +3588,304 @@
     }
   ],
   "Endpoints": [
+    {
+      "Route": "css/AuthStyle.9wgp7jz6ei.css",
+      "AssetFile": "/home/ethar/Desktop/MVC3/GymSysteG2PL/obj/Debug/net9.0/compressed/wjeo17r4pu-9wgp7jz6ei.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000713266762"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1401"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Y9FckZI/dWuu0velyk3bIHV/mpFWGwyF499kKu860JI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 13 Nov 2025 18:30:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"yWS66zpphWUMt59PGM/tg94qSt1v5hNWGi77U/o7UIM=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "9wgp7jz6ei"
+        },
+        {
+          "Name": "label",
+          "Value": "css/AuthStyle.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-yWS66zpphWUMt59PGM/tg94qSt1v5hNWGi77U/o7UIM="
+        }
+      ]
+    },
+    {
+      "Route": "css/AuthStyle.9wgp7jz6ei.css",
+      "AssetFile": "/home/ethar/Desktop/MVC3/GymSysteG2PL/wwwroot/css/AuthStyle.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4771"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"yWS66zpphWUMt59PGM/tg94qSt1v5hNWGi77U/o7UIM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 13 Nov 2025 18:30:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "9wgp7jz6ei"
+        },
+        {
+          "Name": "label",
+          "Value": "css/AuthStyle.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-yWS66zpphWUMt59PGM/tg94qSt1v5hNWGi77U/o7UIM="
+        }
+      ]
+    },
+    {
+      "Route": "css/AuthStyle.9wgp7jz6ei.css.gz",
+      "AssetFile": "/home/ethar/Desktop/MVC3/GymSysteG2PL/obj/Debug/net9.0/compressed/wjeo17r4pu-9wgp7jz6ei.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1401"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Y9FckZI/dWuu0velyk3bIHV/mpFWGwyF499kKu860JI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 13 Nov 2025 18:30:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "9wgp7jz6ei"
+        },
+        {
+          "Name": "label",
+          "Value": "css/AuthStyle.css.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Y9FckZI/dWuu0velyk3bIHV/mpFWGwyF499kKu860JI="
+        }
+      ]
+    },
+    {
+      "Route": "css/AuthStyle.css",
+      "AssetFile": "/home/ethar/Desktop/MVC3/GymSysteG2PL/obj/Debug/net9.0/compressed/wjeo17r4pu-9wgp7jz6ei.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000713266762"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1401"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Y9FckZI/dWuu0velyk3bIHV/mpFWGwyF499kKu860JI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 13 Nov 2025 18:30:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"yWS66zpphWUMt59PGM/tg94qSt1v5hNWGi77U/o7UIM=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-yWS66zpphWUMt59PGM/tg94qSt1v5hNWGi77U/o7UIM="
+        }
+      ]
+    },
+    {
+      "Route": "css/AuthStyle.css",
+      "AssetFile": "/home/ethar/Desktop/MVC3/GymSysteG2PL/wwwroot/css/AuthStyle.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4771"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"yWS66zpphWUMt59PGM/tg94qSt1v5hNWGi77U/o7UIM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 13 Nov 2025 18:30:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-yWS66zpphWUMt59PGM/tg94qSt1v5hNWGi77U/o7UIM="
+        }
+      ]
+    },
+    {
+      "Route": "css/AuthStyle.css.gz",
+      "AssetFile": "/home/ethar/Desktop/MVC3/GymSysteG2PL/obj/Debug/net9.0/compressed/wjeo17r4pu-9wgp7jz6ei.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1401"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Y9FckZI/dWuu0velyk3bIHV/mpFWGwyF499kKu860JI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 13 Nov 2025 18:30:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Y9FckZI/dWuu0velyk3bIHV/mpFWGwyF499kKu860JI="
+        }
+      ]
+    },
     {
       "Route": "css/site.b9sayid5wm.css",
       "AssetFile": "/home/ethar/Desktop/MVC3/GymSysteG2PL/obj/Debug/net9.0/compressed/fww8onca4u-b9sayid5wm.gz",

@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets/Files/plans.json"
     },
     {
+      "Id": "/home/ethar/Desktop/MVC3/GymSysteG2PL/wwwroot/css/AuthStyle.css",
+      "PackagePath": "staticwebassets/css/AuthStyle.css"
+    },
+    {
       "Id": "/home/ethar/Desktop/MVC3/GymSysteG2PL/wwwroot/css/site.css",
       "PackagePath": "staticwebassets/css/site.css"
     },
