@@ -8,6 +8,7 @@ using System.ComponentModel.Design.Serialization;
 using GymSystemBLL.Services.Interfaces;
 using GymSystemBLL.Services.Classes;
 using GymSystemBLL.Services.AttachmentService;
+using Microsoft.AspNetCore.Identity;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -37,7 +38,19 @@ builder.Services.AddScoped<ITrainerService, TrainerService>();
 builder.Services.AddScoped<IPlanService, PlanService>();
 builder.Services.AddScoped<ISessionService, SessionService>();
 builder.Services.AddScoped<IAttachmentService, AttachmentService>();
+builder.Services.AddIdentity<ApplicationUser,IdentityRole>(Config =>
+{
+    Config.Password.RequiredLength = 6;
+    Config.Password.RequireLowercase = true;
+    Config.Password.RequireUppercase = true;
+    Config.User.RequireUniqueEmail = true;
+}).AddEntityFrameworkStores<GymSystemDBContext>();
 
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.LoginPath = "/Account/Login";
+    options.AccessDeniedPath = "/Account/AccessDenied";
+});
 var app = builder.Build();
 
 #region  Data Seed
@@ -53,7 +66,16 @@ if (PendingMigrations?.Any() ?? false)
     dBContext.Database.Migrate();
 
 GymDbContextSeeding.SeedData(dBContext);
+
+
+var RoleManager = Scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+
+var UserManager = Scope.ServiceProvider.GetRequiredService<UserManager<ApplicationUser>>();
+
+IdentityDbContextSeeding.SeedData(RoleManager, UserManager);
 #endregion
+
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
