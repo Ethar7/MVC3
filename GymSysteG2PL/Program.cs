@@ -7,6 +7,7 @@ using GymSystemG2AL.Entities;
 using System.ComponentModel.Design.Serialization;
 using GymSystemBLL.Services.Interfaces;
 using GymSystemBLL.Services.Classes;
+using GymSystemBLL.Services.AttachmentService;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -35,6 +36,8 @@ builder.Services.AddScoped<IAnalyticService, AnalyticService>();
 builder.Services.AddScoped<ITrainerService, TrainerService>();
 builder.Services.AddScoped<IPlanService, PlanService>();
 builder.Services.AddScoped<ISessionService, SessionService>();
+builder.Services.AddScoped<IAttachmentService, AttachmentService>();
+
 var app = builder.Build();
 
 #region  Data Seed

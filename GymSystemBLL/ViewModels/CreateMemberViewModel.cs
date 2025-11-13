@@ -7,11 +7,15 @@ using System.Threading.Tasks;
 using GymSystemG2AL.Entities;
 using GymSystemG2AL.Entities.Enums;
 using GymSystemG2AL.Repositories.Interfaces;
+using Microsoft.AspNetCore.Http;
 
 namespace GymSystemBLL.ViewModels
 {
     public class CreateMemberViewModel
     {
+        [Required(ErrorMessage ="Photo is required")]
+        [Display(Name ="Profile Photo")]
+        public IFormFile PhotoFile {get; set;} = null!;
         [Required(ErrorMessage = "Name is Required")]
         [StringLength(50, MinimumLength = 2, ErrorMessage = "Name Must Be Between 2 and 50 Chars !")]
         [RegularExpression(@"^[a-zA-Z\s]+$", ErrorMessage = "Name Can Contain Only letters !")]

@@ -33,6 +33,10 @@
       "PackagePath": "staticwebassets/images/Theo Vance.jpg"
     },
     {
+      "Id": "/home/ethar/Desktop/MVC3/GymSysteG2PL/wwwroot/images/Users.jpg",
+      "PackagePath": "staticwebassets/images/Users.jpg"
+    },
+    {
       "Id": "/home/ethar/Desktop/MVC3/GymSysteG2PL/wwwroot/images/about p1.jpg",
       "PackagePath": "staticwebassets/images/about p1.jpg"
     },
@@ -91,6 +95,10 @@
     {
       "Id": "/home/ethar/Desktop/MVC3/GymSysteG2PL/wwwroot/images/mdi_whatsapp.jpg",
       "PackagePath": "staticwebassets/images/mdi_whatsapp.jpg"
+    },
+    {
+      "Id": "/home/ethar/Desktop/MVC3/GymSysteG2PL/wwwroot/images/members/c025ee9d-456e-46d2-b45b-ab9d49ea4488.png",
+      "PackagePath": "staticwebassets/images/members/c025ee9d-456e-46d2-b45b-ab9d49ea4488.png"
     },
     {
       "Id": "/home/ethar/Desktop/MVC3/GymSysteG2PL/wwwroot/images/message icon.jpg",

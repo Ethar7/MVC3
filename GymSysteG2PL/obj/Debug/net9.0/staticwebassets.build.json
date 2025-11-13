@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "npn1L8TIZzsmBnO/lFw+GxteBUdJkQ77HhvOk+Rz9H8=",
+  "Hash": "9GMey2AQIXtZ7dQl4YT7GaDMKTbk5J0+63gahWegNLs=",
   "Source": "GymSysteG2PL",
   "BasePath": "_content/GymSysteG2PL",
   "Mode": "Default",
@@ -1970,6 +1970,27 @@
       "OriginalItemSpec": "wwwroot/images/mdi_whatsapp.jpg"
     },
     {
+      "Identity": "/home/ethar/Desktop/MVC3/GymSysteG2PL/wwwroot/images/members/c025ee9d-456e-46d2-b45b-ab9d49ea4488.png",
+      "SourceId": "GymSysteG2PL",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/ethar/Desktop/MVC3/GymSysteG2PL/wwwroot/",
+      "BasePath": "_content/GymSysteG2PL",
+      "RelativePath": "images/members/c025ee9d-456e-46d2-b45b-ab9d49ea4488#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "jszfedbtu3",
+      "Integrity": "83RpqVnHbe5fXbc/pbAWBxGDekkd80vd8djQiraEeoU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/members/c025ee9d-456e-46d2-b45b-ab9d49ea4488.png"
+    },
+    {
       "Identity": "/home/ethar/Desktop/MVC3/GymSysteG2PL/wwwroot/images/message icon.jpg",
       "SourceId": "GymSysteG2PL",
       "SourceType": "Discovered",
@@ -2094,6 +2115,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/images/twitter.jpg"
+    },
+    {
+      "Identity": "/home/ethar/Desktop/MVC3/GymSysteG2PL/wwwroot/images/Users.jpg",
+      "SourceId": "GymSysteG2PL",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/ethar/Desktop/MVC3/GymSysteG2PL/wwwroot/",
+      "BasePath": "_content/GymSysteG2PL",
+      "RelativePath": "images/Users#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "t54zux1mus",
+      "Integrity": "L26gHY8xT5zJpI+dJLa1l/6VefbGLW5tT/udtw+ywGw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/Users.jpg"
     },
     {
       "Identity": "/home/ethar/Desktop/MVC3/GymSysteG2PL/wwwroot/images/why us images.jpg",
@@ -7119,6 +7161,88 @@
       ]
     },
     {
+      "Route": "images/members/c025ee9d-456e-46d2-b45b-ab9d49ea4488.jszfedbtu3.png",
+      "AssetFile": "/home/ethar/Desktop/MVC3/GymSysteG2PL/wwwroot/images/members/c025ee9d-456e-46d2-b45b-ab9d49ea4488.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4836"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"83RpqVnHbe5fXbc/pbAWBxGDekkd80vd8djQiraEeoU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 13 Nov 2025 11:33:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "jszfedbtu3"
+        },
+        {
+          "Name": "label",
+          "Value": "images/members/c025ee9d-456e-46d2-b45b-ab9d49ea4488.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-83RpqVnHbe5fXbc/pbAWBxGDekkd80vd8djQiraEeoU="
+        }
+      ]
+    },
+    {
+      "Route": "images/members/c025ee9d-456e-46d2-b45b-ab9d49ea4488.png",
+      "AssetFile": "/home/ethar/Desktop/MVC3/GymSysteG2PL/wwwroot/images/members/c025ee9d-456e-46d2-b45b-ab9d49ea4488.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4836"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"83RpqVnHbe5fXbc/pbAWBxGDekkd80vd8djQiraEeoU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 13 Nov 2025 11:33:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-83RpqVnHbe5fXbc/pbAWBxGDekkd80vd8djQiraEeoU="
+        }
+      ]
+    },
+    {
       "Route": "images/message icon.jpg",
       "AssetFile": "/home/ethar/Desktop/MVC3/GymSysteG2PL/wwwroot/images/message icon.jpg",
       "Selectors": [],
@@ -7823,6 +7947,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-UAy/Us1QAXuxplzg5Mlo0fYtFCdHejrPCv9fbMX+mnM="
+        }
+      ]
+    },
+    {
+      "Route": "images/Users.jpg",
+      "AssetFile": "/home/ethar/Desktop/MVC3/GymSysteG2PL/wwwroot/images/Users.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "21339"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"L26gHY8xT5zJpI+dJLa1l/6VefbGLW5tT/udtw+ywGw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 13 Nov 2025 11:42:25 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-L26gHY8xT5zJpI+dJLa1l/6VefbGLW5tT/udtw+ywGw="
+        }
+      ]
+    },
+    {
+      "Route": "images/Users.t54zux1mus.jpg",
+      "AssetFile": "/home/ethar/Desktop/MVC3/GymSysteG2PL/wwwroot/images/Users.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "21339"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"L26gHY8xT5zJpI+dJLa1l/6VefbGLW5tT/udtw+ywGw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 13 Nov 2025 11:42:25 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "t54zux1mus"
+        },
+        {
+          "Name": "label",
+          "Value": "images/Users.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-L26gHY8xT5zJpI+dJLa1l/6VefbGLW5tT/udtw+ywGw="
         }
       ]
     },
