@@ -42,9 +42,11 @@
 
 using System.Reflection;
 using GymSystemG2AL.Entities;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-public class GymSystemDBContext : DbContext
+public class GymSystemDBContext : IdentityDbContext<ApplicationUser>
 {
     public GymSystemDBContext(DbContextOptions<GymSystemDBContext> options) : base(options)
     {
@@ -52,10 +54,27 @@ public class GymSystemDBContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        base.OnModelCreating(modelBuilder);
         modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+
+        modelBuilder.Entity<ApplicationUser>(AU =>
+        {
+            AU.Property(X => X.Firstname)
+            .HasColumnType("varchar")
+            .HasMaxLength(50);
+
+            AU.Property(X => X.LastName)
+            .HasColumnType("varchar")
+            .HasMaxLength(50);
+        });
     }
 
     #region Tables
+
+    // public DbSet<ApplicationUser> Users {get; set;}
+    // public DbSet<IdentityRole> Roles {get; set;}
+
+    // public DbSet<IdentityUserRole<string>> UserRoles {get; set;}
     public DbSet<Member> Members { get; set; }
     public DbSet<Trainer> Trainers { get; set; }
     public DbSet<HealthRecord> HealthRecords { get; set; }
